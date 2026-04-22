@@ -137,7 +137,7 @@ app.delete('/api/cart', (req, res) => {
 });
 
 // Catch-all → serve index.html (SPA fallback)
-app.get('*', (_req, res) => {
+app.get('/*', (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
