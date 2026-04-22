@@ -1,0 +1,17 @@
+{
+  "name": "consulting-app",
+  "version": "1.0.0",
+  "description": "E-commerce store",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "latest",
+    "dotenv": "latest",
+    "nodemailer": "latest"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
