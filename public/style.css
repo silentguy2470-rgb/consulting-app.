@@ -1,0 +1,72 @@
+/* ── Shopwave custom styles ───────────────────────────────────────────────── */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Line-clamp utilities (for browsers that don't support Tailwind's built-in) */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Cart sidebar transition */
+#cart-sidebar {
+  will-change: transform;
+}
+
+/* Checkout modal pop-in animation */
+@keyframes bounceIn {
+  0%   { opacity: 0; transform: scale(0.85); }
+  60%  { opacity: 1; transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.35s ease-out forwards;
+}
+
+/* Toast slide-up */
+#toast {
+  bottom: 1.5rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Product card image zoom */
+.group:hover img {
+  transform: scale(1.05);
+}
+
+/* Quantity button focus ring */
+.qty-btn:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* Scrollbar styling for cart sidebar */
+#cart-items::-webkit-scrollbar {
+  width: 4px;
+}
+
+#cart-items::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#cart-items::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 9999px;
+}
+
+#cart-items::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db;
+}
